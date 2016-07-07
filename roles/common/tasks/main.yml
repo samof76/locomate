@@ -1,0 +1,12 @@
+---
+# tasks file for common
+- name: "install all common packages"
+  apt: name={{ item }} state=latest
+  with_items:
+    - git
+    - vim-nox
+    - python-dev
+    - python-pip
+    - python-virtualenv
+    - python-setuptools
+

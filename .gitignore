@@ -1,0 +1,6 @@
+*.retry
+*.tmp
+*.pyc
+*.txt
+*.o
+
