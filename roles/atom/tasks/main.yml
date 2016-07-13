@@ -1,0 +1,7 @@
+---
+# tasks file for atom
+- name: "install atom ide"
+  apt: deb="https://github.com/atom/atom/releases/download/v1.8.0/atom-amd64.deb" state=present
+  become: yes
+
+# tasks to install apm - atom package manager

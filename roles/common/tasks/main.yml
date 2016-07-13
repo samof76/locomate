@@ -10,8 +10,17 @@
     - python-virtualenv
     - python-setuptools
     - flashplugin-installer
+    - terminator
+  become: yes
 
-# install atom ide
-- name: "install atom ide"
-  apt: deb="https://github.com/atom/atom/releases/download/v1.8.0/atom-amd64.deb" state=present
+- name: "add google chrome apt-key"
+  apt_key: url='https://dl-ssl.google.com/linux/linux_signing_key.pub' state=present
+  become: yes
 
+- name: "add repo for google chrome"
+  apt_repository: repo='deb http://dl.google.com/linux/chrome/deb/ stable main' state=present filename=google-chrome update_cache=yes
+  become: yes
+
+- name: "install google chrome"
+  apt: name=google-chrome-stable state=present
+  become: yes
