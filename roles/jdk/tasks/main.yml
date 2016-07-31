@@ -1,0 +1,9 @@
+---
+# tasks file for jdk
+- name: "update repository for jdk"
+  apt_repository: repo="ppa:webupd8team/java" state=present update_cache=yes
+  become: yes
+
+- name: "install oracle jdk"
+  apt: name="oracle-java8-installer" state=present
+  become: yes

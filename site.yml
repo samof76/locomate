@@ -2,5 +2,7 @@
 - hosts: localhost
   roles:
   - common
-  - elixir
-  - atom
+#  - elixir
+#  - vagrant
+#  - atom
+#  - jdk

@@ -1,0 +1,17 @@
+---
+# tasks file for vagrant
+- name: "add virtualbox apt-key to the system"
+  apt_key: url=http://download.virtualbox.org/virtualbox/debian/oracle_vbox_2016.asc state=present
+  become: yes
+
+- name: "add repo to the sources list"
+  apt_repository: repo='deb http://download.virtualbox.org/virtualbox/debian xenial non-free contrib' state=present filename=virtualbox-org update_cache=yes
+  become: yes
+
+- name: "install virtualbox"
+  apt: name=virtualbox-5.0 state=present
+  become: yes
+
+- name: "install vagrant"
+  apt: deb='https://releases.hashicorp.com/vagrant/1.8.5/vagrant_1.8.5_x86_64.deb' state=present
+  become: yes

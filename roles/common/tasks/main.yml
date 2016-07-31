@@ -11,6 +11,10 @@
     - python-setuptools
     - flashplugin-installer
     - terminator
+    - irssi
+    - aria2
+    - tmux
+    - vlc
   become: yes
 
 - name: "add google chrome apt-key"
