@@ -1,8 +1,14 @@
 ---
 - hosts: localhost
   roles:
+<<<<<<< Updated upstream
   - common
   - elixir
+=======
+#  - common
+#  - elixir
+>>>>>>> Stashed changes
 #  - vagrant
 #  - atom
 #  - jdk
+  - rvm
