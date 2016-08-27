@@ -4,4 +4,4 @@
   become: yes
 
 - name: run the installation command
-  command:  \curl -sSL https://get.rvm.io | bash
+  command:  "curl -sSL https://get.rvm.io | sudo bash"
